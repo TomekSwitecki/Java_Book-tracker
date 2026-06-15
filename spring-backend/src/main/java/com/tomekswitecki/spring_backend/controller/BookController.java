@@ -6,7 +6,7 @@ import com.tomekswitecki.spring_backend.model.Book;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://your-book-tracker.onrender.com")
+@CrossOrigin(origins = "*")
 @RestController
 public class BookController {
 
