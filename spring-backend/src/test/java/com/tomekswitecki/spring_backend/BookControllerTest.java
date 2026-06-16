@@ -25,6 +25,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 //    }
 //}
 
+//JUnit – framework do testów
+//Mockito – tworzenie atrap (mocków)
+//MockMvc – symulacja żądań HTTP
+
 @WebMvcTest(BookController.class)
 class BookControllerTest {
 
