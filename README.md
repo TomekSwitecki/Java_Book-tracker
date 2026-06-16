@@ -86,7 +86,3 @@ Through this project I gained practical experience with:
 * Cloud deployment using Railway and Render
 
 ---
-
-## 🎯 Project Background
-
-This project was originally built with an Express.js and SQLite backend and later migrated to Java Spring Boot with PostgreSQL to gain hands-on experience with enterprise Java development and modern deployment workflows.
