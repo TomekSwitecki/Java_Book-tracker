@@ -1,56 +1,92 @@
 .book-item__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .book-item {
-    background: #1c1f29;
-    color: #ffffff;
-    border-radius: 12px;
-    padding: 32px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1.5px solid #f0f2f7;
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    &:first-child {
+        padding-top: 0;
+    }
 }
 
-
-input {
-    color: black;
-    position: relative;
+.book-item__thumbnail {
+    width: 52px;
+    height: 52px;
+    background: #eef2fc;
+    border-radius: 12px;
     display: flex;
-    width: 100%;
-    flex-direction: column;
-
-    gap: 8px;
-
-    height: 45px;
-    padding: 0 16px 0 16px;
-    border-radius: 8px;
-    border: 1px solid gray;
-    background: white;
-
-
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .book-item__main {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+
+    h3 {
+        font-size: 15px;
+        font-weight: 700;
+        color: #1a1a2e;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    p {
+        font-size: 13px;
+        color: #6b7280;
+    }
 }
 
 .book-item__isbn {
-    opacity: 45%;
-
+    font-size: 12px !important;
+    color: #b0b5c4 !important;
 }
 
 .book-item__details {
     display: flex;
     flex-direction: column;
-
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
 }
 
-.book-item__details--bold {
-    font-weight: 600;
+.book-item__pages {
+    font-size: 13px;
+    color: #6b7280;
+
+    span {
+        font-weight: 600;
+        color: #1a1a2e;
+    }
+}
+
+.book-item__stars {
+    display: flex;
+    gap: 2px;
+    font-size: 15px;
+}
+
+.book-item__star--filled {
+    color: #f5a623;
+}
+
+.book-item__star--empty {
+    color: #dde1ea;
 }
