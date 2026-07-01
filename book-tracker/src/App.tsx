@@ -3,14 +3,14 @@ import BookList from './components/BookList';
 //import { mockBooks } from './data/bookData';
 import AddBookForm from './components/AddBookForm';
 import type { Book, NewBook } from './types/books';
-
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   const [books, setBooks] = useState<Book[]>([]);
   const [search, setSearch] = useState("");
 
   async function handleAddBook(book: NewBook) {
-    const response = await fetch("https://javabook-tracker-production.up.railway.app/books", {
+    const response = await fetch(`${API_URL}/books/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,8 @@ function App() {
 
   async function handleBookDelete(id: number) {
     try {
-      await fetch(`https://javabook-tracker-production.up.railway.app/books/${id}`, {
+      // `https://javabook-tracker-production.up.railway.app/books/${id}`
+      await fetch(`${API_URL}/books/${id}`, {
         method: "DELETE",
       });
     } catch (error) {
@@ -58,7 +59,8 @@ function App() {
 
 
   useEffect(() => {
-    fetch("https://javabook-tracker-production.up.railway.app/books")
+    //"https://javabook-tracker-production.up.railway.app/books"
+    fetch(`${API_URL}/books/`)
       .then((response) => response.json())
       .then((data) => setBooks(data));
   }, []);
