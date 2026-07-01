@@ -65,7 +65,7 @@ function App() {
       .then((data) => setBooks(data));
   }, []);
 
-
+  console.log("API:", import.meta.env.VITE_API_URL);
   return (
     <div className='app-container'>
       <div className="app-header">
