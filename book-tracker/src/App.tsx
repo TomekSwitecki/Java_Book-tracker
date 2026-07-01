@@ -10,7 +10,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   async function handleAddBook(book: NewBook) {
-    const response = await fetch(`${API_URL}/books/`, {
+    const response = await fetch(`${API_URL}/books`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ function App() {
 
   useEffect(() => {
     //"https://javabook-tracker-production.up.railway.app/books"
-    fetch(`${API_URL}/books/`)
+    fetch(`${API_URL}/books`)
       .then((response) => response.json())
       .then((data) => setBooks(data));
   }, []);
